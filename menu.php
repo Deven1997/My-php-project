@@ -43,7 +43,10 @@
       <li class="nav-item active">
         <a class="nav-link" href="#"> contact info</a>
       </li>
-    
+
+      <li class="nav-item active">
+        <a class="nav-link" href="sabhsadnondaniarja.php">सभासद नोंदणी अर्ज </a>
+      </li>
     
       
     </ul>
