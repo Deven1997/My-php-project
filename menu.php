@@ -29,7 +29,7 @@
     <ul class="navbar-nav ml-auto">
 
       <li class="nav-item active">
-        <a class="nav-link" href="#">Matrimony <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="matrimony.php">Matrimony </a>
       </li>
     
       <li class="nav-item active">
@@ -38,6 +38,10 @@
 
       <li class="nav-item active">
         <a class="nav-link" href="gunagaurav.php">गुणगौरव अर्ज </a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="#"> contact info</a>
       </li>
     
     
