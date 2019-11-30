@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head><title>गुणगौरव समारंभ </title></head>
-    <body bgcolor="pink"><p>
+    <head><title>गुणगौरव समारंभ </title>
+    <style>
+    h1{
+        text-shadow:5px 5px 5px chocolate;
+    }
+    </style></head>
+    <body bgcolor="Brown"><p>
     <img src="banner3.jpg" alt="Homepage.php" width="104" height="142">
-        <center><h2>बृहन्मुंबई तिळवण तेली समाज, मुंबई</h2>
+        <center><h1>बृहन्मुंबई तिळवण तेली समाज, मुंबई</h1>
         <h5> ( नोंदणी क्रमांक.अ २१४१ मुंबई)
         <br>श्री स्वयंभू रामेश्वर संक्रमण शिबिर,रूम क्रमांक २,कल्याणदस वाडी , जयहिंद सिनेमा समोर ,
         <br> डॉ . आंबेडकर रॊड , चिंचपोकळी (पूर्व ),मुंबई - ४०००१२
