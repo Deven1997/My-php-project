@@ -36,7 +36,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <form id="login" method="post" action="Homepage.php">
+                    <form id="admin" method="post" action="admin.php">
                         <tr>
                             <td>
                                 <div class="form-group">
@@ -54,7 +54,7 @@
                                     <tbody>
                                         <tr>
                                             <th> <img id="previewimg" src="#" alt="your image" width="200px" height="200px">
-                                                <input type="file" name="image" id="image" onchange="readURL(this)">
+                                                <input type="file" name="imageUpload" id="image" onchange="readURL(this)">
                                                 <script type="text/javascript">
                                                     function readURL(input) {
                                                         if (input.files && input.files[0]) {
@@ -78,7 +78,7 @@
 
                         <tr>
                             <td align="right">
-                                <button class="btn btn-primary pull-left">Submit</button>
+                                <input name="Upload Now" type="submit" value="Upload Image">
                             </td>
                         </tr>
                     </form>
@@ -88,8 +88,10 @@
         </div>
 
         <?php
-
             include "database/connection.php";
+            if (isset($_POST["submit"])) {
+                header("Location:Homepage.php");
+            }
 
             ?>
     <?php }
