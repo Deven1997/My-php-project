@@ -74,19 +74,16 @@
   if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     if ($useremail == $row["email"] && $userpass == $row["password"]) {
-
-      session_start();      //user login session start
+      session_destroy();
+      session_start();  //user login session start
       $_SESSION['email'] = $useremail; // to identify user on another page
-
       header("Location:Homepage.php");
-      exit();
     } else {
       echo "<script> alert('Invalid Credentials, please try again')</script>";
     }
   } else {
     echo "0 results";
   }
-
   ?>
 </body>
 
