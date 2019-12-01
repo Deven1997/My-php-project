@@ -2,6 +2,9 @@
 <html>
     <head><title>गुणगौरव समारंभ </title></head>
     <body bgcolor="pink"><p>
+    <?php 
+        include "menu.php"
+    ?>
     <img src="banner3.jpg" alt="Homepage.php" width="104" height="142">
         <center><h2>बृहन्मुंबई तिळवण तेली समाज, मुंबई</h2>
         <h5> ( नोंदणी क्रमांक.अ २१४१ मुंबई)
