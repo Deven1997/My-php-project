@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Domine&display=swap" rel="stylesheet">
 
     <title>Add information</title>
 </head>
@@ -27,16 +29,16 @@
 
         <br>
 
-        <div class="container bg-white">
+        <div class="container bg-white" style="margin-top: 50px">
             <div id="output"></div>
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th class="bg-secondary text-white " style="text-align: center ">Create post to publish</th>
+                        <th class="bg-secondary text-white " style="text-align: center ">Create a post to publish</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <form id="admin" method="post" action="admin.php">
+                    <form id="admin" method="post" action="upload2.php" enctype="multipart/form-data">
                         <tr>
                             <td>
                                 <div class="form-group">
@@ -53,8 +55,11 @@
                                     <col width="700">
                                     <tbody>
                                         <tr>
+
                                             <th> <img id="previewimg" src="#" alt="your image" width="200px" height="200px">
-                                                <input type="file" name="imageUpload" id="image" onchange="readURL(this)">
+                                                <input type="file" name="fileToUpload" id="fileToUpload" onchange="readURL(this)">
+
+                                                <!-- below javascript code is to preview the image before uploding  -->
                                                 <script type="text/javascript">
                                                     function readURL(input) {
                                                         if (input.files && input.files[0]) {
@@ -62,12 +67,15 @@
 
                                                             reader.onload = function(e) {
                                                                 $('#previewimg').attr('src', e.target.result);
+
+
                                                             }
 
                                                             reader.readAsDataURL(input.files[0]);
                                                         }
                                                     }
                                                 </script>
+
                                             </th>
                                             <th> <textarea class="form-control input-lg" placeholder="Description..." type="text" name="description" cols="40" rows="8" required></textarea> </th>
                                         </tr>
@@ -78,7 +86,8 @@
 
                         <tr>
                             <td align="right">
-                                <input name="Upload Now" type="submit" value="Upload Image">
+                                <input class="btn bg-success" type="submit" value="Publish" name="Upload Now">
+
                             </td>
                         </tr>
                     </form>
@@ -89,13 +98,10 @@
 
         <?php
             include "database/connection.php";
-            if (isset($_POST["submit"])) {
-                header("Location:Homepage.php");
-            }
-
             ?>
-    <?php }
-    ?>
+
+    <?php } ?>
+
 </body>
 
 </html>

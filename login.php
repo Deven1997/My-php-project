@@ -6,19 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Login</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Domine&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <?php
-  include "menu.php"
+
+  // include "menu.php";
+  include "php_files/checkCredentials.php";
   ?>
 
   <br>
   <br>
   <br>
 
-  <div class="container">
+  <div class="container" style="margin-top: 50px">
     <div id="output"></div>
     <table class="table table-bordered table-striped">
       <thead>
@@ -29,7 +35,7 @@
       <tbody>
         <tr>
           <td>
-            <form id="login" method="post" action="login.php">
+            <form id="login" method="post" action="#">
               <div class="form-group">
                 <label>Email ID</label>
                 <input class="form-control" placeholder="Email" type="email" name="email">
@@ -54,37 +60,9 @@
 
   </div>
 
-  <?php
-
-  include "database/connection.php";
-
-  $useremail = "";
-  $userpass = "";
-  if (isset($_POST['email'])) {
-    $useremail = $_POST['email'];
-  }
-  if (isset($_POST['password'])) {
-    $userpass = $_POST['password'];
-  }
-
-
-  $sql = "SELECT * FROM admin_login where email = '$useremail'";
-  $result = $conn->query($sql);
-
-  if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    if ($useremail == $row["email"] && $userpass == $row["password"]) {
-      session_destroy();
-      session_start();  //user login session start
-      $_SESSION['email'] = $useremail; // to identify user on another page
-      header("Location:Homepage.php");
-    } else {
-      echo "<script> alert('Invalid Credentials, please try again')</script>";
-    }
-  } else {
-    echo "0 results";
-  }
-  ?>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+header,
+footer {
+    padding: 20px;
+    background: darkslategray;
+    color: white;
+
+}
+
+
+section {
+    width: 60%;
+    height: 500px;
+    float: left;
+    background: darkgrey;
+}
+
+.left {
+    width: 20%;
+    height: 500px;
+    float: left;
+    background: orangered;
+}
+
+.right {
+    width: 20%;
+    float: left;
+    height: 500px;
+    background: blueviolet;
+}
